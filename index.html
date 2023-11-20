@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+
+
+</head>
+
+<body>
+    <div id="box-music" class="box-music">
+        <audio id="audio_file1" src="music/Salam.mp3" type="audio/mpeg"></audio>
+        <div class="box-img">
+            <img class="img" id="img-music" src="1.jpg" alt="">
+        </div>
+        <p id="name-music" class="name-music">name music</p>
+        <p class="name-artist">unknown</p>
+        <div class="box-time">
+            <p id="current-time" class="current-time">0:00</p>
+            <p id="main-time" class="main-time">0:00</p>
+        </div>
+        <input class="rang-music" id="inp_music_range" onclick="mousedown1(event)" type="range" min="0">
+        <div class="control-box">
+
+            <svg onclick="likeIcon(event)" class="icon icon-hearth">
+                <use xlink:href="symbol-defs.svg#icon-heart"></use>
+            </svg>
+            <div class="icon-box" onclick="lastMusic()"><svg class="icon icon-last">
+                    <use xlink:href="symbol-defs.svg#icon-backward"></use>
+                </svg></div>
+            <div class="icon-box-play" onclick="playPause()"><svg id="svg_icon_play" class="icon-play">
+                    <use id="play_icon" xlink:href="symbol-defs.svg#icon-play"></use>
+                </svg></div>
+            <div class="icon-box" onclick="nextMusic()"><svg class="icon icon-next">
+                    <use xlink:href="symbol-defs.svg#icon-forward"></use>
+                </svg></div>
+
+
+            <svg onclick="hiddenVolume(event)" class="icon icon-music">
+                <use xlink:href="symbol-defs.svg#icon-volume-medium"></use>
+            </svg>
+        </div>
+        <div id="box-volume" class="box-volume-hidden">
+            <input class="range-volume" id="inp_music_volume" onmousemove="mousedownVolume(event)" type="range"
+                min="0" max="100" value="100">
+        </div>
+
+
+
+
+    </div>
+
+</body>
+
+</html>
